@@ -16,13 +16,14 @@ struct config {
 };
 
 struct result {
-    int result;
+    const char *result;
     int cpu_time_used;
     int real_time_used;
     int memory_used;
     int signum;
-    int exit_code;
 };
+
+void init_config(struct config *);
 
 void run(struct config *, struct result *);
 
